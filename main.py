@@ -45,3 +45,7 @@ async def delete_todo(todo_id: int):
             todos.pop(index)
             return
     raise HTTPException(status_code=404, detail="Todo not found")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
